@@ -1,0 +1,66 @@
+/* 
+Include any CSS you need to:
+- limit the max width of the gallery
+- layout the images responsively, centering the gallery on the page
+- preserve the aspect ratio of each image
+*/
+/* I like this layout way better in mobie version/*
+/* Contents */
+
+body {
+    /* Page background */
+    background-color: #D9E9FF;
+  }
+  
+  .gallery {
+    display: grid;
+  /* Make Responsive */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    justify-items: center;
+    /* Limit the max width */
+    max-width: 1500px;
+    /* Center */
+    margin: auto;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    /* spacing between children/card contents */
+    gap: 1rem;
+    /* Card width and height */
+    width: 350px;
+    height: 370px;
+    /* Make border visible and give it rounded corners */
+    border: 1px solid grey;
+    border-radius: 10px;
+    /* Card background */
+    background-color: aquamarine;
+  }
+  
+  /* All card contents */
+  .card * {
+    margin: 0;
+  }
+  
+  img {
+    /* Make each image have the same height */
+    height: 233px;
+    
+    /* Preserve aspect ratio */
+    object-fit: cover;
+    /* Round top corners */
+    border-radius: 8px 8px 0px 0px;
+  }
+  
+  figcaption {
+    /* Make flex container/change direction */
+    display: flex;
+    flex-direction: column;
+  
+    /* Center text */
+    text-align: center;
+   
+    /* Center in the y-axis */
+    justify-content: center;
+  }
